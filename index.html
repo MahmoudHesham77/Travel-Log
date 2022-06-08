@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/all.min.js" defer></script>
     <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/validate.js" defer></script>
     <title>Travel</title>
   </head>
 
@@ -558,37 +560,39 @@
                   enctype="application/x-www-form-urlencoded"
                 >
                   <input
-                    class="form-control mb-2"
+                    class="first-name form-control mb-2"
                     type="text"
                     name="Customer 1st Name"
                     placeholder="First Name*"
                     required
                   />
+                  <div class="error-first alert alert-danger">This field can't be less than 3 characters </div>
                   <input
-                    class="form-control mb-2"
+                    class=" second-name form-control mb-2"
                     type="text"
                     name="Customer Last Name"
                     placeholder="Last Name*"
                     required
                   />
+                  <div class="error-second alert alert-danger">This field can't be less than 3 characters </div>
                   <input
                     type="email"
-                    class="form-control mb-3"
+                    class=" email form-control mb-3"
                     id="exampleFormControlInput1"
                     name="Customer Email"
                     placeholder="EmailSubject*"
                     required
                   />
+                  <div class="error-email alert alert-danger">Email can't be empty </div>
                   <textarea
-                    class="form-control"
+                    class=" message form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     name="Text message"
                     placeholder="Write something here...."
                   ></textarea>
-                  <button class="btn form-btn btn-dark sec7-btn">
-                    Submit Email
-                  </button>
+                  <div class="error-message  alert alert-danger">Message must be at least 10 characters </div>
+                  <input type="submit" value="Submit Email" class="btn form-btn btn-dark sec7-btn">      
                 </form>
               </div>
             </div>
